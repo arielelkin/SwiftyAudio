@@ -15,27 +15,27 @@ class ViewController: UIViewController {
     var distortion = AVAudioUnitDistortion()
     var reverb = AVAudioUnitReverb()
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        var audioSessionSetupError: NSError?
+        // Setup AVAudioSession
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayAndRecord)
 
-        AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayAndRecord, error: &audioSessionSetupError)
+            let ioBufferDuration = 128.0 / 44100.0
 
-        var ioBufferDuration = 128.0 / 44100.0
+            try AVAudioSession.sharedInstance().setPreferredIOBufferDuration(ioBufferDuration)
 
-        AVAudioSession.sharedInstance().setPreferredIOBufferDuration(ioBufferDuration, error: &audioSessionSetupError)
-        if audioSessionSetupError != nil {
-            println("audioSession setup error: \(audioSessionSetupError)")
+        } catch {
+            assertionFailure("AVAudioSession setup error: \(error)")
         }
 
 
-
         // Setup engine and node instances
-        var input = engine.inputNode
-        var output = engine.outputNode
-        var format = input.inputFormatForBus(0)
+        assert(engine.inputNode != nil)
+        let input = engine.inputNode!
+        let output = engine.outputNode
+        let format = input.inputFormatForBus(0)
 
 
         distortion.loadFactoryPreset(.DrumsBitBrush)
@@ -52,14 +52,14 @@ class ViewController: UIViewController {
         engine.connect(distortion, to: reverb, format: format)
 
         engine.connect(reverb, to: output, format: format)
-        
-        
-        var error:NSError?
+
+
         // Start engine
-        engine.startAndReturnError(&error)
-        
+        do {
+            try engine.start()
+        } catch {
+            assertionFailure("AVAudioEngine start error: \(error)")
+        }
     }
-    
-    
 }
 

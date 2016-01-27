@@ -156,6 +156,8 @@
 		B0AB6F001ADD80BD0029D476 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0720;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = Ariel;
 				TargetAttributes = {
@@ -409,6 +411,7 @@
 				B0AB6F291ADD80BD0029D476 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B0AB6F2A1ADD80BD0029D476 /* Build configuration list for PBXNativeTarget "SwiftyAudioTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +420,7 @@
 				B0AB6F2C1ADD80BD0029D476 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
