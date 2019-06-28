@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		B0AB6F0E1ADD80BD0029D476 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AB6F0D1ADD80BD0029D476 /* AppDelegate.swift */; };
 		B0AB6F101ADD80BD0029D476 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AB6F0F1ADD80BD0029D476 /* ViewController.swift */; };
-		B0AB6F131ADD80BD0029D476 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0AB6F111ADD80BD0029D476 /* Main.storyboard */; };
 		B0AB6F151ADD80BD0029D476 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0AB6F141ADD80BD0029D476 /* Images.xcassets */; };
 		B0AB6F181ADD80BD0029D476 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0AB6F161ADD80BD0029D476 /* LaunchScreen.xib */; };
 		B0AB6F241ADD80BD0029D476 /* SwiftyAudioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AB6F231ADD80BD0029D476 /* SwiftyAudioTests.swift */; };
@@ -26,11 +25,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		83317BA922C6332900414562 /* README.MD */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.MD; sourceTree = SOURCE_ROOT; };
 		B0AB6F081ADD80BD0029D476 /* SwiftyAudio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftyAudio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0AB6F0C1ADD80BD0029D476 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0AB6F0D1ADD80BD0029D476 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0AB6F0F1ADD80BD0029D476 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B0AB6F121ADD80BD0029D476 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B0AB6F141ADD80BD0029D476 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B0AB6F171ADD80BD0029D476 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		B0AB6F1D1ADD80BD0029D476 /* SwiftyAudioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyAudioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +58,7 @@
 		B0AB6EFF1ADD80BD0029D476 = {
 			isa = PBXGroup;
 			children = (
+				83317BA922C6332900414562 /* README.MD */,
 				B0AB6F0A1ADD80BD0029D476 /* SwiftyAudio */,
 				B0AB6F201ADD80BD0029D476 /* SwiftyAudioTests */,
 				B0AB6F091ADD80BD0029D476 /* Products */,
@@ -79,7 +79,6 @@
 			children = (
 				B0AB6F0D1ADD80BD0029D476 /* AppDelegate.swift */,
 				B0AB6F0F1ADD80BD0029D476 /* ViewController.swift */,
-				B0AB6F111ADD80BD0029D476 /* Main.storyboard */,
 				B0AB6F141ADD80BD0029D476 /* Images.xcassets */,
 				B0AB6F161ADD80BD0029D476 /* LaunchScreen.xib */,
 				B0AB6F0B1ADD80BD0029D476 /* Supporting Files */,
@@ -158,7 +157,7 @@
 			attributes = {
 				LastSwiftMigration = 0720;
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = Ariel;
 				TargetAttributes = {
 					B0AB6F071ADD80BD0029D476 = {
@@ -172,7 +171,7 @@
 			};
 			buildConfigurationList = B0AB6F031ADD80BD0029D476 /* Build configuration list for PBXProject "SwiftyAudio" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -194,7 +193,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0AB6F131ADD80BD0029D476 /* Main.storyboard in Resources */,
 				B0AB6F181ADD80BD0029D476 /* LaunchScreen.xib in Resources */,
 				B0AB6F151ADD80BD0029D476 /* Images.xcassets in Resources */,
 			);
@@ -238,14 +236,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B0AB6F111ADD80BD0029D476 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B0AB6F121ADD80BD0029D476 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B0AB6F161ADD80BD0029D476 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -261,23 +251,35 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -305,17 +307,28 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -334,6 +347,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -344,7 +358,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SwiftyAudio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "arielito.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -354,7 +370,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SwiftyAudio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "arielito.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -372,6 +390,7 @@
 				);
 				INFOPLIST_FILE = SwiftyAudioTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "arielito.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftyAudio.app/SwiftyAudio";
 			};
@@ -387,6 +406,7 @@
 				);
 				INFOPLIST_FILE = SwiftyAudioTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "arielito.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftyAudio.app/SwiftyAudio";
 			};

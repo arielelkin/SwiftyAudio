@@ -18,9 +18,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        view.backgroundColor = .white
+
         // Setup AVAudioSession
         do {
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayAndRecord)
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playAndRecord)
 
             let ioBufferDuration = 128.0 / 44100.0
 
@@ -32,19 +34,18 @@ class ViewController: UIViewController {
 
 
         // Setup engine and node instances
-        assert(engine.inputNode != nil)
-        let input = engine.inputNode!
+        let input = engine.inputNode
         let output = engine.outputNode
-        let format = input.inputFormatForBus(0)
+        let format = input.inputFormat(forBus: 0)
 
 
-        distortion.loadFactoryPreset(.DrumsBitBrush)
+        distortion.loadFactoryPreset(.drumsBitBrush)
         distortion.preGain = 4.0
-        engine.attachNode(distortion)
+        engine.attach(distortion)
 
-        reverb.loadFactoryPreset(.MediumChamber)
+        reverb.loadFactoryPreset(.mediumChamber)
         reverb.wetDryMix = 80
-        engine.attachNode(reverb)
+        engine.attach(reverb)
 
         // Connect nodes
         engine.connect(input, to: distortion, format: format)
