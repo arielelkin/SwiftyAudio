@@ -32,12 +32,10 @@ class ViewController: UIViewController {
             assertionFailure("AVAudioSession setup error: \(error)")
         }
 
-
         // Setup engine and node instances
         let input = engine.inputNode
         let output = engine.outputNode
         let format = input.inputFormat(forBus: 0)
-
 
         distortion.loadFactoryPreset(.drumsBitBrush)
         distortion.preGain = 4.0
@@ -54,7 +52,6 @@ class ViewController: UIViewController {
 
         engine.connect(reverb, to: output, format: format)
 
-
         // Start engine
         do {
             try engine.start()
@@ -63,4 +60,3 @@ class ViewController: UIViewController {
         }
     }
 }
-
