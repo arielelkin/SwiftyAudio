@@ -11,9 +11,9 @@ import AVFoundation
 
 class ViewController: UIViewController {
 
-    var engine = AVAudioEngine()
-    var distortion = AVAudioUnitDistortion()
-    var reverb = AVAudioUnitReverb()
+    let engine = AVAudioEngine()
+    let distortion = AVAudioUnitDistortion()
+    let reverb = AVAudioUnitReverb()
 
     override func viewDidLoad() {
         super.viewDidLoad()
